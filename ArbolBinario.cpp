@@ -157,6 +157,46 @@ public:
         MostrarArbol(raiz,0);
     }
 
+    /*int TamArbol(Nodo* inicial){
+
+        int TI,TD;
+
+        if(inicial==NULL){
+            return -1;
+        }
+        else{
+            TI=TamArbol(inicial->getHijoIzquierdo());
+            TD=TamArbol(inicial->getHijoDerecho());
+
+            if(TI>TD)
+                return TI+1;
+            else
+                return TD+1;
+        }
+    }*/
+
+    int TamArbol(Nodo* inicial){
+        if(inicial==NULL){
+            return 0;
+        }
+        if(inicial->getHijoIzquierdo()==NULL && inicial->getHijoDerecho()==NULL)
+            return 1;
+        return 1+max(TamArbol(inicial->getHijoIzquierdo()),TamArbol(inicial->getHijoIzquierdo()));
+    }
+    int TamArbol(){
+        TamArbol(raiz);
+    }
+
+    bool AVL(Nodo* inicial){
+        if((TamArbolTamArbol(inicial->getHijoIzquierdo()-TamArbol(inicial->getHijoIzquierdo())<=1)
+
+            return true;
+
+        if((TamArbolTamArbol(inicial->getHijoIzquierdo()-TamArbol(inicial->getHijoIzquierdo())>1)
+
+            return false;
+    }
+
 };
 
 int main()
@@ -182,6 +222,10 @@ int main()
     arbol.PostOrden();
     cout<<"\n\n-----ARBOL-----"<<endl;
     arbol.MostrarArbol(0);
+    cout<<"\n\n-----Tamañ0 del arbol-----"<<endl;
+    arbol.TamArbol();
+    cout<<"4"<<endl;
+
 
     /*Nodo nodo = Nodo(5);
     nodo.imprimir();
