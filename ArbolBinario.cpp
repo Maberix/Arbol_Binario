@@ -224,7 +224,7 @@ int main()
     arbol.MostrarArbol(0);
     cout<<"\n\n-----Tamañ0 del arbol-----"<<endl;
     arbol.TamArbol();
-    cout<<"4"<<endl;
+    
 
 
     /*Nodo nodo = Nodo(5);
